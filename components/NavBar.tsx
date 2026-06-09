@@ -45,7 +45,7 @@ export function NavBar() {
           <div className="flex justify-between items-center h-14 md:h-[60px]">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="font-display tracking-[0.15em] text-white flex flex-col justify-center mt-1 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary">
+              <Link href="/" className="font-display tracking-[0.15em] text-white flex flex-col justify-center mt-1 rounded-md focus:outline-none">
                 <span className="text-2xl md:text-3xl font-black uppercase leading-none">
                   {brand.name.split(' ')[0]}
                   <span className="text-brand-primary">

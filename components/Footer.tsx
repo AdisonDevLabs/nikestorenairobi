@@ -26,7 +26,7 @@ export function Footer() {
             <Link href="/" className="font-display font-black text-3xl tracking-tighter text-white uppercase mb-4 block">
                {brand.name.split(' ')[0]}
                <span className="text-brand-primary">
-                 {brand.name.split(' ').length > 1 ? ' ' + brand.name.split(' ').slice(1).join(' ') : ''}
+                 {brand.name.split(' ').length > 1 ? ' ' + brand.name.split(' ')[1] : ''}
                </span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">

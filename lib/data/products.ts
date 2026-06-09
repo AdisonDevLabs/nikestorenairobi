@@ -38,20 +38,20 @@ export const products: Product[] = [
   },
   {
     "id": "p2",
-    "name": "Original Nike Air Force 1 Red",
+    "name": "Original Nike Air Force 1",
     "price": 19800,
     "originalPrice": 22500,
     "image": "/NIKE AIR FORCE 1.jpg",
-    "images": ["/NIKE AIR FORCE 1.jpg", "/NIKE AIR FORCE 1 white.jpg"],
+    "images": ["/NIKE AIR FORCE 1.jpg", "/NIKE AIR FORCE 1_2.jpg", "/NIKE AIR FORCE 1 white.jpg"],
     "category": "Sneakers",
     "rating": 4.8,
     "reviews": 56,
     "sizes": ["39", "40", "41", "42", "43", "44", "45"],
-    "colors": ["Red"],
+    "colors": ["Red", "White"],
     "isNewArrival": true,
     "isBestSeller": true,
     "isFlashDeal": false,
-    "description": "The timeless classic. Original Nike Air Force 1 in a striking all-red colorway. Clean, durable, and an absolute staple for your rotation."
+    "description": "The timeless classic. Original Nike Air Force 1. Clean, durable, and an absolute staple for your rotation."
   },
   {
     "id": "p3",
@@ -98,7 +98,7 @@ export const products: Product[] = [
     "rating": 4.8,
     "reviews": 24,
     "sizes": ["M", "L", "XL", "XXL"],
-    "colors": ["Red", "White"],
+    "colors": ["Red", "White", "Black", "Grey", "Beige"],
     "isNewArrival": true,
     "isBestSeller": true,
     "isFlashDeal": false,
@@ -115,7 +115,7 @@ export const products: Product[] = [
     "rating": 4.7,
     "reviews": 19,
     "sizes": ["M", "L", "XL"],
-    "colors": ["Black", "White"],
+    "colors": ["Black", "White", "Grey", "Maroon"],
     "isNewArrival": false,
     "isBestSeller": false,
     "isFlashDeal": true,
@@ -132,7 +132,7 @@ export const products: Product[] = [
     "rating": 5.0,
     "reviews": 42,
     "sizes": ["M", "L", "XL", "XXL"],
-    "colors": ["Green"],
+    "colors": ["Green", "Grey", "Maroon", "Pink", "Purple"],
     "isNewArrival": true,
     "isBestSeller": true,
     "isFlashDeal": false,
@@ -149,11 +149,11 @@ export const products: Product[] = [
     "rating": 4.7,
     "reviews": 27,
     "sizes": ["M", "L", "XL"],
-    "colors": ["Black"],
+    "colors": ["Black", "Grey", "Yellow"],
     "isNewArrival": false,
     "isBestSeller": true,
     "isFlashDeal": false,
-    "description": "Wear confidence. This stealthy all-black Premium Nike Two Piece features a ribbed collar shirt and matching shorts for a modern, sleek look."
+    "description": "Wear confidence. This stealthy Premium Nike Two Piece features a ribbed collar shirt and matching shorts for a modern, sleek look."
   }
 ];
 
@@ -169,7 +169,12 @@ export const colorMap: Record<string, string> = {
   'Green': '#228B22',
   'Navy Blue': '#000080',
   'Blue': '#0000ff',
-  'Pink': '#ff1493'
+  'Pink': '#ff1493',
+  'Purple': '#800080',
+  'Grey': '#808080',
+  'Yellow': '#ffd700',
+  'Maroon': '#800000',
+  'Beige': '#f5f5dc'
 };
 
 export const sizeGuideData = [
