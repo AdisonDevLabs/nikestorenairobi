@@ -4,7 +4,7 @@ import { Truck, MessageCircle, Star, Sparkles, Tag, CheckCircle, ShieldCheck } f
 export const brand = {
   name: "Nike Store Nairobi",
   shortName: "Nike Nairobi",
-  logo: "/nike-nairobi-logo.jpeg",
+  logo: "/nike-nairobi-logo.enc",
   tagline: "Where All Athletes Belong",
   description:
     "Premium streetwear vibes. Clean, comfortable, and trendy Nike sneakers and full drip outfits.",
