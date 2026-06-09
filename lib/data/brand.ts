@@ -1,190 +1,188 @@
-// lib/data/brand.ts
-import { Truck, MessageCircle, Star, Sparkles, Tag, CheckCircle, ShieldCheck } from 'lucide-react';
+// lib/data/products.ts
 
-export const brand = {
-  name: "Nike Store Nairobi",
-  shortName: "Nike Nairobi",
-  logo: "public/nike-nairobi-logo.jpeg",
-  tagline: "Where All Athletes Belong",
-  description:
-    "Premium streetwear vibes. Clean, comfortable, and trendy Nike sneakers and full drip outfits.",
-  location: "Sarit Centre, Westlands, Nairobi",
-  seo: {
-    title: "Nike Store Nairobi | Premium Sneakers & Streetwear",
-    description: "Premium Nike footwear and streetwear ecommerce website. Fast delivery available countrywide in Kenya.",
+export interface Product {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice?: number;
+  image: string;
+  images: string[];
+  category: string;
+  rating: number;
+  reviews: number;
+  sizes: string[];
+  colors: string[];
+  isNewArrival?: boolean;
+  isBestSeller?: boolean;
+  isFlashDeal?: boolean;
+  description: string;
+}
+
+export const products: Product[] = [
+  {
+    "id": "p1",
+    "name": "Nike Alphafly 3",
+    "price": 39100,
+    "originalPrice": 45000,
+    "image": "/Nike Alphafly 3.jpg",
+    "images": ["/Nike Alphafly 3.jpg"],
+    "category": "Running",
+    "rating": 4.9,
+    "reviews": 42,
+    "sizes": ["39", "40", "41", "42", "43", "44", "45"],
+    "colors": ["White", "Pink"],
+    "isNewArrival": false,
+    "isBestSeller": true,
+    "isFlashDeal": true,
+    "description": "Premium marathon running shoes engineered for speed. Experience unmatched energy return and comfort with the Nike Alphafly 3."
   },
-
-  hero: {
-    badge: "Premium Shoes and Outfits in Kenya",
-    headlineTop: "WEAR",
-    headlineHighlight: "CONFIDENCE",
-    backgroundImage: "/NIKE AIR FORCE 1.jpg",
-    ctaPrimary: "Order on WhatsApp",
-    ctaSecondary: "Shop Collection",
+  {
+    "id": "p2",
+    "name": "Original Nike Air Force 1",
+    "price": 19800,
+    "originalPrice": 22500,
+    "image": "/NIKE AIR FORCE 1.jpg",
+    "images": ["/NIKE AIR FORCE 1.jpg", "/NIKE AIR FORCE 1_2.jpg", "/NIKE AIR FORCE 1 white.jpg"],
+    "category": "Sneakers",
+    "rating": 4.8,
+    "reviews": 56,
+    "sizes": ["39", "40", "41", "42", "43", "44", "45"],
+    "colors": ["Red", "White"],
+    "isNewArrival": true,
+    "isBestSeller": true,
+    "isFlashDeal": false,
+    "description": "The timeless classic. Original Nike Air Force 1. Clean, durable, and an absolute staple for your rotation."
   },
-
-  sections: {
-    featured: {
-      title: "Featured Collections",
-      subtitle: "Find your type. Browse by style and step out with the full Nike drip."
-    },
-    flashDeals: {
-      badge: "Live Now",
-      title: "Flash Deals",
-      subtitle: "Grab your favorite styles like the Nike Alphafly 3 before they're gone.",
-      cta: "View All Deals"
-    },
-    newArrivals: {
-      badge: "Updated Weekly",
-      title: "Latest Styles",
-      subtitle: "Fresh styles added weekly — be the first to own them.",
-      cta: "View All Arrivals",
-      trendingBadgePrefix: "Trending in" 
-    },
-    bestSellers: {
-      badge: "Customer Favorites",
-      title: "BEST SELLERS",
-      subtitle: "Trusted and loved by athletes and streetwear lovers across Kenya.",
-      cta: "View All Favorites"
-    },
-    whyUs: {
-      badge: "Trust & Reliability",
-      titleTop: "WHY SHOP WITH",
-      subtitle: "We focus on premium quality, comfort, and fast service to make your shopping experience effortless."
-    },
-    reviews: {
-      badge: "Real Customers from TikTok & WhatsApp",
-      titleTop: "WHAT OUR",
-      titleBottom: "CUSTOMERS SAY"
-    },
-    whatsappCta: {
-      badge: "We Are Online",
-      titleTop: "START YOUR",
-      titleBottom: "ORDER NOW",
-      subtitle: "Chat with us directly on WhatsApp to confirm size, color, and delivery in minutes."
-    }
+  {
+    "id": "p3",
+    "name": "Air Jordan 11 Retro",
+    "price": 24500,
+    "originalPrice": 28000,
+    "image": "/AIR JORDAN 11 RETRO.jpg",
+    "images": ["/AIR JORDAN 11 RETRO.jpg"],
+    "category": "Sneakers",
+    "rating": 4.9,
+    "reviews": 31,
+    "sizes": ["39", "40", "41", "42", "43", "44"],
+    "colors": ["Black", "Blue"],
+    "isNewArrival": true,
+    "isBestSeller": true,
+    "isFlashDeal": false,
+    "description": "Boss up your game with the iconic Air Jordan 11 Retro. Featuring premium patent leather detailing and classic Jordan cushioning."
   },
-
-  whatsappNumber: "254762231280",
-  whatsappMessage: {
-    general:
-      "Hello Nike Store Nairobi,\n\nI would like to place an order.\n\nShoe Screenshot/Name:\n\nShoe Size:\nPreferred Colour:\nDelivery Location:\n\nPlease confirm availability and total price.\n\nThank you.",
+  {
+    "id": "p4",
+    "name": "Nike Air Monarch",
+    "price": 11000,
+    "originalPrice": 14000,
+    "image": "/NIKE AIR MORNACH.jpg",
+    "images": ["/NIKE AIR MORNACH.jpg"],
+    "category": "Sneakers",
+    "rating": 4.6,
+    "reviews": 18,
+    "sizes": ["39", "40", "41", "42", "43", "44", "45"],
+    "colors": ["White", "Navy Blue"],
+    "isNewArrival": false,
+    "isBestSeller": false,
+    "isFlashDeal": false,
+    "description": "Keep winning with the ultimate comfort sneaker. The Nike Air Monarch delivers supportive cushioning and durable leather for everyday wear."
   },
-  socialLinks: {
-    instagram: "https://instagram.com/nike.store.nairobi",
-    facebook: "https://facebook.com/nike.store.nairobi",
-    tiktok: "https://tiktok.com/@nike.store.nairobi",
+  {
+    "id": "p5",
+    "name": "Exclusive Nike Premium Outfit",
+    "price": 12500,
+    "originalPrice": 15000,
+    "image": "/EXCLUSIVE NIKE PREMIUM OUTFITS.jpg",
+    "images": ["/EXCLUSIVE NIKE PREMIUM OUTFITS.jpg", "/EXCLUSIVE NIKE PREMIUM OUTFITS1.jpg", "/EXCLUSIVE NIKE PREMIUM OUTFITS2.jpg"],
+    "category": "Outfits",
+    "rating": 4.8,
+    "reviews": 24,
+    "sizes": ["M", "L", "XL", "XXL"],
+    "colors": ["Red", "White", "Black", "Grey", "Beige"],
+    "isNewArrival": true,
+    "isBestSeller": true,
+    "isFlashDeal": false,
+    "description": "Dress simple. Look expensive. Premium Nike streetwear featuring a comfortable half-zip sweatshirt and matching track pants."
   },
-  deliveryInfo: {
-    standard: "Countrywide shipping via trusted couriers",
-    nairobi: "Fast delivery available within Nairobi (Sarit Centre dispatch)",
+  {
+    "id": "p6",
+    "name": "Nike Store Full Drift Set",
+    "price": 14000,
+    "originalPrice": 16500,
+    "image": "/FULL DRIFT.jpg",
+    "images": ["/FULL DRIFT.jpg", "/FULL DRIFT1.jpg", "/FULL DRIFT2.jpg", "/FULL DRIFT3.jpg"],
+    "category": "Outfits",
+    "rating": 4.7,
+    "reviews": 19,
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Black", "White", "Grey", "Maroon"],
+    "isNewArrival": false,
+    "isBestSeller": false,
+    "isFlashDeal": true,
+    "description": "Stay trending with the Full Drift set. Bold color blocking and premium materials make this the perfect modern streetwear collection."
   },
-  trustStatements: [
-    "Fast Countrywide Delivery",
-    "Premium Quality Guaranteed",
-    "WhatsApp Ordering",
-    "Dress Simple. Look Expensive.",
-  ],
-  features: [
-    {
-      title: "Premium Quality",
-      description: "Every pair and outfit is carefully selected to ensure comfort, durability, and modern style."
-    },
-    {
-      title: "Exclusive Outfits",
-      description: "Get the full Nike drip with our premium two-piece tracksuits and modern streetwear collection."
-    },
-    {
-      title: "Fast Delivery",
-      description: "We process and deliver orders promptly so you receive your items as fast as possible across Kenya."
-    },
-    {
-      title: "WhatsApp Ordering",
-      description: "No complicated checkout — just send a shoe screenshot/name, size, and location to place your order instantly."
-    }
-  ],
-  whatsappTrustSignals: [
-    "Fast response within minutes",
-    "Secure and reliable",
-    "Quick countrywide delivery available",
-    "Trusted across 🇰🇪 🇺🇬 🇹🇿"
-  ],
-  whatsappMockChat: [
-    {
-      sender: "user",
-      text: `Hello Nike Store Nairobi
+  {
+    "id": "p7",
+    "name": "Full Nike Drip Set",
+    "price": 18500,
+    "originalPrice": 22000,
+    "image": "/FULL NIKE DRIP green.jpg",
+    "images": ["/FULL NIKE DRIP green.jpg", "/FULL NIKE DRIP grey.jpg", "/FULL NIKE DRIP maroon.jpg", "/FULL NIKE DRIP pink.jpg", "/FULL NIKE DRIP purple.jpg"],
+    "category": "Outfits",
+    "rating": 5.0,
+    "reviews": 42,
+    "sizes": ["M", "L", "XL", "XXL"],
+    "colors": ["Green", "Grey", "Maroon", "Pink", "Purple"],
+    "isNewArrival": true,
+    "isBestSeller": true,
+    "isFlashDeal": false,
+    "description": "Clean. Comfortable. Premium streetwear vibes. Get the ultimate full set including heavy jacket, hoodie, sweatpants, tee, gloves, and beanie."
+  },
+  {
+    "id": "p8",
+    "name": "Premium Nike Two Piece",
+    "price": 9500,
+    "originalPrice": 12000,
+    "image": "/Premium Nike Two Piece black.jpg",
+    "images": ["/Premium Nike Two Piece black.jpg", "/Premium Nike Two Piece grey.jpg", "/Premium Nike Two Piece yellow.jpg"],
+    "category": "Outfits",
+    "rating": 4.7,
+    "reviews": 27,
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Black", "Grey", "Yellow"],
+    "isNewArrival": false,
+    "isBestSeller": true,
+    "isFlashDeal": false,
+    "description": "Wear confidence. This stealthy Premium Nike Two Piece features a ribbed collar shirt and matching shorts for a modern, sleek look."
+  }
+];
 
-I'd like to order:
+export const getBestSellers = () => products.filter((p) => p.isBestSeller);
+export const getNewArrivals = () => products.filter((p) => p.isNewArrival);
+export const getFlashDeals = () => products.filter((p) => p.isFlashDeal);
+export const getProductById = (id: string) => products.find((p) => p.id === id);
 
-• ORIGINAL NIKE AIR FORCE 1 RED
-Reference Image: NIKE AIR FORCE 1.jpg
-Size: 42 
-
-Delivery: Westlands
-
-Subtotal: KSh 19,800
-
-Please confirm availability, total payable and payment method.
-
-Thank you.
-
-`,
-      time: "10:05 AM"
-    },
-    {
-      sender: "brand",
-      text: `Yes, it's available.
-
-Total including fast delivery: KSh 20,000
-
-You can pay via M-Pesa.
-
-Send the confirmation message once payment is complete.
-`,
-      time: "10:06 AM"
-    }
-  ],
-  salesCallout: "Boss Up Your Game 💯",
-  
-  featuredImages: [
-    "AIR JORDAN 11 RETRO.jpg",
-    "EXCLUSIVE NIKE PREMIUM OUTFITS.jpg",
-    "FULL DRIFT.jpg",
-    "FULL NIKE DRIP green.jpg",
-    "NIKE AIR FORCE 1.jpg",
-    "NIKE AIR MORNACH.jpg",
-    "Nike Alphafly 3.jpg",
-    "Premium Nike Two Piece black.jpg"
-  ]
+export const colorMap: Record<string, string> = {
+  'Black': '#000000',
+  'White': '#ffffff',
+  'Red': '#ff0000',
+  'Green': '#228B22',
+  'Navy Blue': '#000080',
+  'Blue': '#0000ff',
+  'Pink': '#ff1493',
+  'Purple': '#800080',
+  'Grey': '#808080',
+  'Yellow': '#ffd700',
+  'Maroon': '#800000',
+  'Beige': '#f5f5dc'
 };
 
-export const announcementMessages = [
-  { text: "Fast Delivery Countrywide", icon: Truck },
-  { text: "Order Easily Via WhatsApp", icon: MessageCircle },
-  { text: "Premium Streetwear Collection", icon: Sparkles },
-  { text: "Located at Sarit Centre, Westlands", icon: Star },
-  { text: "Flash Deals on Alphafly 3 Available", icon: Tag },
-];
-
-export const cartTrustFeatures = [
-  { text: "Countrywide Shipping", icon: Truck },
-  { text: "Premium Quality Guaranteed", icon: CheckCircle },
-  { text: "Secure Ordering", icon: ShieldCheck },
-  { text: "WhatsApp Support", icon: MessageCircle },
-];
-
-export const footerQuickShopLinks = [
-  { label: "Sneakers (Air Force, Jordans)", href: "/shop?category=sneakers" },
-  { label: "Premium Nike Outfits", href: "/shop?category=outfits" },
-  { label: "Nike Full Drift", href: "/shop?category=drift" },
-  { label: "Running Shoes", href: "/shop?category=running" },
-  { label: "Best Sellers", href: "/shop?category=best-sellers" },
-];
-
-export const footerSupportLinks = [
-  { label: "How to Order", href: "/how-to-order" },
-  { label: "Delivery Info", href: "/delivery" },
-  { label: "Size Guide", href: "/size-guide" },
-  { label: "Returns & Exchanges", href: "/returns" },
-  { label: "FAQ", href: "/faq" },
+export const sizeGuideData = [
+  {eu: 39, uk: 5.5, us: 6.5, cm: 24.5},
+  {eu: 40, uk: 6, us: 7, cm: 25},
+  {eu: 41, uk: 7, us: 8, cm: 26},
+  {eu: 42, uk: 7.5, us: 8.5, cm: 26.5},
+  {eu: 43, uk: 8.5, us: 9.5, cm: 27.5},
+  {eu: 44, uk: 9, us: 10, cm: 28},
+  {eu: 45, uk: 10, us: 11, cm: 29},
 ];

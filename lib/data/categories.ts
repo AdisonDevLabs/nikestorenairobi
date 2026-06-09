@@ -20,7 +20,7 @@ export const categories: Category[] = [
     name: "PREMIUM OUTFITS",
     slug: "premium-outfits",
     label: "Best Sellers",
-    image: "public/FULL NIKE DRIP pink.jpg",
+    image: "/FULL NIKE DRIP pink.jpg",
     span: "md:col-span-2",
   },
 ];
