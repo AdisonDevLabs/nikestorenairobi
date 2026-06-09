@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  /* Default: Shoe World Theme */
+  --theme-primary: #C6FF00;
+  --theme-primary-hover: #A3D900;
+  --theme-accent: #FF6B00;
+  --theme-bg-dark: #0E0E0E;
+  --theme-bg-card: #141414;
+}
+
+@theme {
+  /* Fonts */
+  --font-sans: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+  --font-display: var(--font-display, ui-sans-serif, system-ui, sans-serif);
+  --font-poppins: var(--font-poppins, ui-sans-serif, system-ui, sans-serif);
+
+  /* Custom Colors */
+  --color-brand-primary: var(--theme-primary);
+  --color-brand-hover: var(--theme-primary-hover);
+  --color-brand-accent: var(--theme-accent);
+  --color-brand-dark: var(--theme-bg-dark);
+  --color-brand-card: var(--theme-bg-card);
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
